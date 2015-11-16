@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <title>Hamworks homepage</title>
     <link href="style/grid.css" rel="stylesheet">
+    <script src="jquery-2.1.4.min.js"></script>
 </head>
 <body>
     <div id="body">

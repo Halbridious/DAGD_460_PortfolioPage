@@ -1,0 +1,162 @@
+/*///////////////////
+//////elements///////
+///////////////////*/
+
+body{
+    background:#e7e7e7;
+    padding:0;
+}
+
+a{
+    color:#FFF;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:line-through;
+}
+
+a.current{
+    text-decoration:overline;
+}
+
+/*///////////////////
+/////////ids/////////
+///////////////////*/
+
+#body{
+    margin:auto;
+    max-width:1200px;
+    min-width:820px;
+    padding:0;
+}
+
+#head{
+    background:#111243;
+    height:50px;
+    text-align:center;
+    font-family: Consolas;
+    font-weight:bold;
+    color:#FFF;
+    font-size:36px;
+    padding:0;
+    position:relative;
+    box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.75);
+    z-index: 3;
+}
+
+#mainNav {
+    background:#a1a5d3;
+    padding: 0;
+    height:50px;
+    display:block;
+    position:relative;
+    box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.75);
+    z-index:2;
+}
+
+#navList{
+    display:inline;
+    list-style:none;
+    padding: 0;
+    font-family:Consolas;
+    font-size:30px;
+    color:#FFF;
+    line-height: 50px;
+}
+
+#blog{
+    text-align:left;
+    padding:0;
+}
+
+#contact{
+    text-align: center;
+    padding:0;
+}
+
+#portfolio{
+    text-align: right;
+    padding:0;
+}
+
+#backdrop{
+    background:#b4b4d6;
+    height: auto;
+    padding: 50px 0;
+    position:relative;
+    box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.75);
+    z-index:1;
+}
+
+#twitter{
+    float:right;
+    padding:0 25px 0 0;
+}
+
+/*////////////////////
+////////Classes///////
+////////////////////*/
+.picture{
+    
+    border:2px solid #333;
+    height:150px;
+    margin-bottom:25px; 
+    box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.75), inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+}
+
+.empty {
+    border:none;
+    box-shadow:none;
+}
+
+.portLink{
+    display:block;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+
+/*///////////////////
+///Column settings///
+\\\\\\\\\\\\\\\\\\\*/
+.col1,
+.col2,
+.col3,
+.col4,
+.col5{
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+    /*makes padding push in not out*/
+    box-sizing:border-box;
+    min-height:10px;
+    padding:0;
+}
+
+.col1{
+    width:18%;
+}
+
+.col2{
+    width:38%;
+}
+
+.col3{
+    width:58%;
+}
+
+.col4{
+    width:78%;
+}
+
+.col5{
+    width:98%;
+}
+
+.clear 
+{
+    clear: both;
+}
+

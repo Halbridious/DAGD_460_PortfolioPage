@@ -1,0 +1,179 @@
+//Variables
+@textColor: #FFF;
+@bodyColor: #E7E7E7;
+@headColor: #111243;
+@desktopBackground: #B4B4D6;
+@navColor: #A1A5D3;
+
+//RULES
+.BoxShadow(@shadowColor){
+    
+    box-shadow: 0px 5px 5px 1px fade(@shadowColor, 75%);
+}
+
+//Inset key doesn't work for some reason, so GGWP on the whole "bevel" look
+.PictureFrame{
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+/*///////////////////
+//////elements///////
+///////////////////*/
+
+body{
+    background: @bodyColor;
+    padding:0;
+}
+
+a{
+    color: @textColor;
+    text-decoration:none;
+    &:hover{
+        text-decoration:line-through;
+    }
+    &.current
+    {
+        text-decoration:underline;
+    }
+}
+
+
+/*///////////////////
+/////////ids/////////
+///////////////////*/
+
+#body{
+    margin:auto;
+    max-width:1200px;
+    min-width:820px;
+    padding:0;
+    
+    #head{
+        background: @headColor;
+        height:50px;
+        text-align:center;
+        font-family: Consolas;
+        font-weight:bold;
+        color:@textColor;
+        font-size:36px;
+        padding:0;
+        position:relative;
+        z-index: 3;
+        .BoxShadow(#000);
+    }
+
+    #mainNav {
+        background:@navColor;
+        padding: 0;
+        height:50px;
+        display:block;
+        position:relative;
+        .BoxShadow(#000);
+        z-index:2;
+    }
+    
+    #navList{
+        display:inline;
+        list-style:none;
+        padding: 0;
+        font-family:Consolas;
+        font-size:30px;
+        color:@textColor;
+        line-height: 50px;
+        
+        #blog{
+            text-align:left;
+            padding:0;
+        }
+
+        #contact{
+            text-align: center;
+            padding:0;
+        }
+
+        #portfolio{
+            text-align: right;
+            padding:0;
+        }
+    }
+}
+
+#backdrop{
+    background:@desktopBackground;
+    height: auto;
+    padding: 50px 0;
+    position:relative;
+    .BoxShadow(#000);
+    z-index:1;
+}
+
+#twitter{
+    float:right;
+    padding:0 25px 0 0;
+}
+
+/*////////////////////
+////////Classes///////
+////////////////////*/
+.picture{
+    
+    border:2px solid #333;
+    height:150px;
+    margin-bottom:25px; 
+    .PictureFrame;
+}
+
+.empty {
+    border:none;
+    box-shadow:none;
+}
+
+.portLink{
+    display:block;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+
+/*///////////////////
+///Column settings///
+\\\\\\\\\\\\\\\\\\\*/
+.col1,
+.col2,
+.col3,
+.col4,
+.col5{
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+    /*makes padding push in not out*/
+    box-sizing:border-box;
+    min-height:10px;
+    padding:0;
+}
+
+.col1{
+    width:18%;
+}
+
+.col2{
+    width:38%;
+}
+
+.col3{
+    width:58%;
+}
+
+.col4{
+    width:78%;
+}
+
+.col5{
+    width:98%;
+}
+
+.clear 
+{
+    clear: both;
+}
+
